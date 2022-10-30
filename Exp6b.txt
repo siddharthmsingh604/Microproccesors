@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+
+int main(){
+	int a,b,c,d;
+	cout<<"Enter Your Number : -  "<<endl;
+	cin>>a;
+
+	cout<<"Enter No fo shift: - "<<endl;
+	cin>>b;
+
+	asm mov ax, a;
+	asm mov cx, b;
+	asm shl ax, cl;
+	asm mov c , ax;
+	cout<<"Shift left :- "<<c<<endl;
+
+	cout<<"Enter no to shift: - "<<endl;
+	cin>>d;
+	asm mov ax, a;
+	asm mov cx, d;
+	asm shr ax, cl;
+	asm mov c, ax;
+
+	cout<<"Shift Right :- "<<c<<endl;
+
+	return 0;
+	}
